@@ -9,11 +9,11 @@ One data object and one set of components render **three outputs**:
 | Web page (responsive div/flexbox) | `out/web.html` | The full scrolling story |
 | PDF (print ready) | `out/onchain-wrapped.pdf` | A keepsake with a receipts page |
 
-![Web scroll](assets/wrapped-scroll.gif)
+![Web scroll](wrapped-scroll.gif)
 
 | Email | PDF |
 |---|---|
-| ![Email](assets/email.png) | ![PDF](assets/pdf.png) |
+| ![Email](email.png) | ![PDF](pdf.png) |
 
 ## How Hyper Elements is used
 
