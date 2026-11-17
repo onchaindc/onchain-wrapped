@@ -41,7 +41,7 @@ export const sample: WalletYear = {
     { date: "Aug 07", moment: "Airdrop arrived", amount: "+$12" },
     { date: "Oct 30", moment: "Finally sold the thing you forgot about", amount: "+$4,120" },
   ],
-  shareUrl: "https://example.com/wrapped/degen.sample",
+  shareUrl: "https://github.com/onchaindc/onchain-wrapped",
 };
 
 export type Persona = { name: string; blurb: string };
