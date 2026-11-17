@@ -1,0 +1,1231 @@
+{
+  "counters": {
+    "u_row": 8,
+    "u_column": 8,
+    "u_content_text": 10,
+    "u_content_heading": 7,
+    "u_content_table": 1,
+    "u_content_button": 1
+  },
+  "body": {
+    "rows": [
+      {
+        "cells": [
+          1
+        ],
+        "columns": [
+          {
+            "contents": [
+              {
+                "type": "text",
+                "values": {
+                  "containerPadding": "10px",
+                  "fontSize": "15px",
+                  "textAlign": "left",
+                  "lineHeight": "1.5",
+                  "linkStyle": {
+                    "inherit": true,
+                    "linkColor": "#0000ee",
+                    "linkHoverColor": "#0000ee",
+                    "linkUnderline": true,
+                    "linkHoverUnderline": true
+                  },
+                  "color": "#FFF6E5",
+                  "fontFamily": {
+                    "label": "Georgia",
+                    "value": "Georgia, 'Times New Roman', serif"
+                  },
+                  "text": "degen.sample &middot; 0x7a3F...c91E",
+                  "_meta": {
+                    "htmlID": "u_content_text_1",
+                    "htmlClassNames": "u_content_text"
+                  },
+                  "selectable": true,
+                  "draggable": true,
+                  "duplicatable": true,
+                  "deletable": true,
+                  "hideable": true
+                }
+              },
+              {
+                "type": "heading",
+                "values": {
+                  "containerPadding": "10px",
+                  "headingType": "h1",
+                  "fontSize": "64px",
+                  "textAlign": "left",
+                  "lineHeight": "1",
+                  "linkStyle": {
+                    "inherit": true,
+                    "linkColor": "#0000ee",
+                    "linkHoverColor": "#0000ee",
+                    "linkUnderline": true,
+                    "linkHoverUnderline": true
+                  },
+                  "color": "#FFF6E5",
+                  "fontWeight": 900,
+                  "text": "Your 2026, onchain.",
+                  "fontFamily": {
+                    "label": "Arial Black",
+                    "value": "'Arial Black', Impact, 'Helvetica Neue', Arial, sans-serif"
+                  },
+                  "_meta": {
+                    "htmlID": "u_content_heading_1",
+                    "htmlClassNames": "u_content_heading"
+                  },
+                  "selectable": true,
+                  "draggable": true,
+                  "duplicatable": true,
+                  "deletable": true,
+                  "hideable": true
+                }
+              },
+              {
+                "type": "text",
+                "values": {
+                  "containerPadding": "10px",
+                  "fontSize": "18px",
+                  "textAlign": "left",
+                  "lineHeight": "1.5",
+                  "linkStyle": {
+                    "inherit": true,
+                    "linkColor": "#0000ee",
+                    "linkHoverColor": "#0000ee",
+                    "linkUnderline": true,
+                    "linkHoverUnderline": true
+                  },
+                  "color": "#FFF6E5",
+                  "fontFamily": {
+                    "label": "Georgia",
+                    "value": "Georgia, 'Times New Roman', serif"
+                  },
+                  "text": "Every swap, bridge and 3 AM decision, counted. Scroll to see what you did.",
+                  "_meta": {
+                    "htmlID": "u_content_text_2",
+                    "htmlClassNames": "u_content_text"
+                  },
+                  "selectable": true,
+                  "draggable": true,
+                  "duplicatable": true,
+                  "deletable": true,
+                  "hideable": true
+                }
+              }
+            ],
+            "values": {
+              "backgroundColor": "",
+              "padding": "0px",
+              "border": {},
+              "borderRadius": "0px",
+              "_meta": {
+                "htmlID": "u_column_1",
+                "htmlClassNames": "u_column"
+              },
+              "deletable": true,
+              "locked": false
+            }
+          }
+        ],
+        "values": {
+          "displayCondition": null,
+          "columns": false,
+          "_styleGuide": null,
+          "backgroundColor": "#1E1147",
+          "columnsBackgroundColor": "",
+          "backgroundImage": {
+            "url": "",
+            "fullWidth": true,
+            "repeat": "no-repeat",
+            "size": "custom",
+            "position": "center"
+          },
+          "padding": "56px 28px",
+          "anchor": "",
+          "noStackMobile": false,
+          "_meta": {
+            "htmlID": "u_row_1",
+            "htmlClassNames": "u_row"
+          },
+          "selectable": true,
+          "draggable": true,
+          "duplicatable": true,
+          "deletable": true,
+          "hideable": true,
+          "locked": false,
+          "cells": [
+            1
+          ]
+        }
+      },
+      {
+        "cells": [
+          1
+        ],
+        "columns": [
+          {
+            "contents": [
+              {
+                "type": "heading",
+                "values": {
+                  "containerPadding": "10px",
+                  "headingType": "h1",
+                  "fontSize": "110px",
+                  "textAlign": "left",
+                  "lineHeight": "1",
+                  "linkStyle": {
+                    "inherit": true,
+                    "linkColor": "#0000ee",
+                    "linkHoverColor": "#0000ee",
+                    "linkUnderline": true,
+                    "linkHoverUnderline": true
+                  },
+                  "color": "#1E1147",
+                  "fontWeight": 900,
+                  "text": "412",
+                  "fontFamily": {
+                    "label": "Arial Black",
+                    "value": "'Arial Black', Impact, 'Helvetica Neue', Arial, sans-serif"
+                  },
+                  "_meta": {
+                    "htmlID": "u_content_heading_2",
+                    "htmlClassNames": "u_content_heading"
+                  },
+                  "selectable": true,
+                  "draggable": true,
+                  "duplicatable": true,
+                  "deletable": true,
+                  "hideable": true
+                }
+              },
+              {
+                "type": "text",
+                "values": {
+                  "containerPadding": "10px",
+                  "fontSize": "22px",
+                  "textAlign": "left",
+                  "lineHeight": "1.5",
+                  "linkStyle": {
+                    "inherit": true,
+                    "linkColor": "#0000ee",
+                    "linkHoverColor": "#0000ee",
+                    "linkUnderline": true,
+                    "linkHoverUnderline": true
+                  },
+                  "color": "#1E1147",
+                  "fontFamily": {
+                    "label": "Georgia",
+                    "value": "Georgia, 'Times New Roman', serif"
+                  },
+                  "text": "transactions signed. That is <b>1.13</b> a day. Your wallet did not take a single holiday.",
+                  "_meta": {
+                    "htmlID": "u_content_text_3",
+                    "htmlClassNames": "u_content_text"
+                  },
+                  "selectable": true,
+                  "draggable": true,
+                  "duplicatable": true,
+                  "deletable": true,
+                  "hideable": true
+                }
+              }
+            ],
+            "values": {
+              "backgroundColor": "",
+              "padding": "0px",
+              "border": {},
+              "borderRadius": "0px",
+              "_meta": {
+                "htmlID": "u_column_2",
+                "htmlClassNames": "u_column"
+              },
+              "deletable": true,
+              "locked": false
+            }
+          }
+        ],
+        "values": {
+          "displayCondition": null,
+          "columns": false,
+          "_styleGuide": null,
+          "backgroundColor": "#FF5C8A",
+          "columnsBackgroundColor": "",
+          "backgroundImage": {
+            "url": "",
+            "fullWidth": true,
+            "repeat": "no-repeat",
+            "size": "custom",
+            "position": "center"
+          },
+          "padding": "56px 28px",
+          "anchor": "",
+          "noStackMobile": false,
+          "_meta": {
+            "htmlID": "u_row_2",
+            "htmlClassNames": "u_row"
+          },
+          "selectable": true,
+          "draggable": true,
+          "duplicatable": true,
+          "deletable": true,
+          "hideable": true,
+          "locked": false,
+          "cells": [
+            1
+          ]
+        }
+      },
+      {
+        "cells": [
+          1
+        ],
+        "columns": [
+          {
+            "contents": [
+              {
+                "type": "heading",
+                "values": {
+                  "containerPadding": "10px",
+                  "headingType": "h1",
+                  "fontSize": "56px",
+                  "textAlign": "left",
+                  "lineHeight": "1",
+                  "linkStyle": {
+                    "inherit": true,
+                    "linkColor": "#0000ee",
+                    "linkHoverColor": "#0000ee",
+                    "linkUnderline": true,
+                    "linkHoverUnderline": true
+                  },
+                  "color": "#1E1147",
+                  "fontWeight": 900,
+                  "text": "Base was home.",
+                  "fontFamily": {
+                    "label": "Arial Black",
+                    "value": "'Arial Black', Impact, 'Helvetica Neue', Arial, sans-serif"
+                  },
+                  "_meta": {
+                    "htmlID": "u_content_heading_3",
+                    "htmlClassNames": "u_content_heading"
+                  },
+                  "selectable": true,
+                  "draggable": true,
+                  "duplicatable": true,
+                  "deletable": true,
+                  "hideable": true
+                }
+              },
+              {
+                "type": "text",
+                "values": {
+                  "containerPadding": "10px",
+                  "fontSize": "18px",
+                  "textAlign": "left",
+                  "lineHeight": "1.5",
+                  "linkStyle": {
+                    "inherit": true,
+                    "linkColor": "#0000ee",
+                    "linkHoverColor": "#0000ee",
+                    "linkUnderline": true,
+                    "linkHoverUnderline": true
+                  },
+                  "color": "#1E1147",
+                  "fontFamily": {
+                    "label": "Georgia",
+                    "value": "Georgia, 'Times New Roman', serif"
+                  },
+                  "text": "42% of your activity lived there. You still visited 4 other chains, mostly for airdrops.",
+                  "_meta": {
+                    "htmlID": "u_content_text_4",
+                    "htmlClassNames": "u_content_text"
+                  },
+                  "selectable": true,
+                  "draggable": true,
+                  "duplicatable": true,
+                  "deletable": true,
+                  "hideable": true
+                }
+              },
+              {
+                "type": "table",
+                "values": {
+                  "containerPadding": "10px",
+                  "columns": 3,
+                  "rows": 5,
+                  "border": {
+                    "borderTopWidth": "1px",
+                    "borderTopStyle": "solid",
+                    "borderTopColor": "#CCC",
+                    "borderLeftWidth": "1px",
+                    "borderLeftStyle": "solid",
+                    "borderLeftColor": "#CCC",
+                    "borderRightWidth": "1px",
+                    "borderRightStyle": "solid",
+                    "borderRightColor": "#CCC",
+                    "borderBottomWidth": "1px",
+                    "borderBottomStyle": "solid",
+                    "borderBottomColor": "#CCC"
+                  },
+                  "stripedRows": false,
+                  "stripedRowsBackgroundColor": "#CCC",
+                  "enableHeader": true,
+                  "repeatHeaderOnEachPage": true,
+                  "headerBackgroundColor": "#DDDDDD",
+                  "headerFontWeight": 700,
+                  "headerFontSize": "14px",
+                  "headerTextAlign": "left",
+                  "headerVerticalAlign": "middle",
+                  "headerPadding": "10px",
+                  "contentBackgroundColor": "#FFFFFF",
+                  "contentFontSize": "14px",
+                  "contentTextAlign": "left",
+                  "contentVerticalAlign": "middle",
+                  "contentLineHeight": "140%",
+                  "contentPadding": "10px",
+                  "enableFooter": false,
+                  "repeatFooterOnEachPage": true,
+                  "footerBackgroundColor": "#DDDDDD",
+                  "footerFontWeight": 700,
+                  "footerFontSize": "14px",
+                  "footerTextAlign": "left",
+                  "footerVerticalAlign": "middle",
+                  "footerPadding": "10px",
+                  "linkStyle": {
+                    "body": true,
+                    "linkColor": "#0000ee",
+                    "linkHoverColor": "#0000ee",
+                    "linkUnderline": true,
+                    "linkHoverUnderline": true
+                  },
+                  "table": {
+                    "headers": [
+                      {
+                        "cells": [
+                          {
+                            "text": "Chain",
+                            "width": 0
+                          },
+                          {
+                            "text": "Txs",
+                            "width": 0
+                          },
+                          {
+                            "text": "Share",
+                            "width": 0
+                          }
+                        ],
+                        "height": 0
+                      }
+                    ],
+                    "rows": [
+                      {
+                        "cells": [
+                          {
+                            "text": "Base",
+                            "width": 0
+                          },
+                          {
+                            "text": "171",
+                            "width": 0
+                          },
+                          {
+                            "text": "42%",
+                            "width": 0
+                          }
+                        ],
+                        "height": 0
+                      },
+                      {
+                        "cells": [
+                          {
+                            "text": "Solana",
+                            "width": 0
+                          },
+                          {
+                            "text": "118",
+                            "width": 0
+                          },
+                          {
+                            "text": "29%",
+                            "width": 0
+                          }
+                        ],
+                        "height": 0
+                      },
+                      {
+                        "cells": [
+                          {
+                            "text": "Arbitrum",
+                            "width": 0
+                          },
+                          {
+                            "text": "64",
+                            "width": 0
+                          },
+                          {
+                            "text": "16%",
+                            "width": 0
+                          }
+                        ],
+                        "height": 0
+                      },
+                      {
+                        "cells": [
+                          {
+                            "text": "Ethereum",
+                            "width": 0
+                          },
+                          {
+                            "text": "41",
+                            "width": 0
+                          },
+                          {
+                            "text": "10%",
+                            "width": 0
+                          }
+                        ],
+                        "height": 0
+                      },
+                      {
+                        "cells": [
+                          {
+                            "text": "Mantle",
+                            "width": 0
+                          },
+                          {
+                            "text": "18",
+                            "width": 0
+                          },
+                          {
+                            "text": "4%",
+                            "width": 0
+                          }
+                        ],
+                        "height": 0
+                      }
+                    ],
+                    "footers": []
+                  },
+                  "_meta": {
+                    "htmlID": "u_content_table_1",
+                    "htmlClassNames": "u_content_table"
+                  },
+                  "selectable": true,
+                  "draggable": true,
+                  "duplicatable": true,
+                  "deletable": true,
+                  "hideable": true
+                }
+              }
+            ],
+            "values": {
+              "backgroundColor": "",
+              "padding": "0px",
+              "border": {},
+              "borderRadius": "0px",
+              "_meta": {
+                "htmlID": "u_column_3",
+                "htmlClassNames": "u_column"
+              },
+              "deletable": true,
+              "locked": false
+            }
+          }
+        ],
+        "values": {
+          "displayCondition": null,
+          "columns": false,
+          "_styleGuide": null,
+          "backgroundColor": "#9BF0C8",
+          "columnsBackgroundColor": "",
+          "backgroundImage": {
+            "url": "",
+            "fullWidth": true,
+            "repeat": "no-repeat",
+            "size": "custom",
+            "position": "center"
+          },
+          "padding": "56px 28px",
+          "anchor": "",
+          "noStackMobile": false,
+          "_meta": {
+            "htmlID": "u_row_3",
+            "htmlClassNames": "u_row"
+          },
+          "selectable": true,
+          "draggable": true,
+          "duplicatable": true,
+          "deletable": true,
+          "hideable": true,
+          "locked": false,
+          "cells": [
+            1
+          ]
+        }
+      },
+      {
+        "cells": [
+          1
+        ],
+        "columns": [
+          {
+            "contents": [
+              {
+                "type": "heading",
+                "values": {
+                  "containerPadding": "10px",
+                  "headingType": "h1",
+                  "fontSize": "96px",
+                  "textAlign": "left",
+                  "lineHeight": "1",
+                  "linkStyle": {
+                    "inherit": true,
+                    "linkColor": "#0000ee",
+                    "linkHoverColor": "#0000ee",
+                    "linkUnderline": true,
+                    "linkHoverUnderline": true
+                  },
+                  "color": "#1E1147",
+                  "fontWeight": 900,
+                  "text": "23 apes.",
+                  "fontFamily": {
+                    "label": "Arial Black",
+                    "value": "'Arial Black', Impact, 'Helvetica Neue', Arial, sans-serif"
+                  },
+                  "_meta": {
+                    "htmlID": "u_content_heading_4",
+                    "htmlClassNames": "u_content_heading"
+                  },
+                  "selectable": true,
+                  "draggable": true,
+                  "duplicatable": true,
+                  "deletable": true,
+                  "hideable": true
+                }
+              },
+              {
+                "type": "text",
+                "values": {
+                  "containerPadding": "10px",
+                  "fontSize": "22px",
+                  "textAlign": "left",
+                  "lineHeight": "1.5",
+                  "linkStyle": {
+                    "inherit": true,
+                    "linkColor": "#0000ee",
+                    "linkHoverColor": "#0000ee",
+                    "linkUnderline": true,
+                    "linkHoverUnderline": true
+                  },
+                  "color": "#1E1147",
+                  "fontFamily": {
+                    "label": "Georgia",
+                    "value": "Georgia, 'Times New Roman', serif"
+                  },
+                  "text": "<b>9</b> rugged. <b>14</b> survived. That is a <b>61%</b> survival rate, which is better than most of the people reading this.",
+                  "_meta": {
+                    "htmlID": "u_content_text_5",
+                    "htmlClassNames": "u_content_text"
+                  },
+                  "selectable": true,
+                  "draggable": true,
+                  "duplicatable": true,
+                  "deletable": true,
+                  "hideable": true
+                }
+              }
+            ],
+            "values": {
+              "backgroundColor": "",
+              "padding": "0px",
+              "border": {},
+              "borderRadius": "0px",
+              "_meta": {
+                "htmlID": "u_column_4",
+                "htmlClassNames": "u_column"
+              },
+              "deletable": true,
+              "locked": false
+            }
+          }
+        ],
+        "values": {
+          "displayCondition": null,
+          "columns": false,
+          "_styleGuide": null,
+          "backgroundColor": "#FFD43B",
+          "columnsBackgroundColor": "",
+          "backgroundImage": {
+            "url": "",
+            "fullWidth": true,
+            "repeat": "no-repeat",
+            "size": "custom",
+            "position": "center"
+          },
+          "padding": "56px 28px",
+          "anchor": "",
+          "noStackMobile": false,
+          "_meta": {
+            "htmlID": "u_row_4",
+            "htmlClassNames": "u_row"
+          },
+          "selectable": true,
+          "draggable": true,
+          "duplicatable": true,
+          "deletable": true,
+          "hideable": true,
+          "locked": false,
+          "cells": [
+            1
+          ]
+        }
+      },
+      {
+        "cells": [
+          1
+        ],
+        "columns": [
+          {
+            "contents": [
+              {
+                "type": "heading",
+                "values": {
+                  "containerPadding": "10px",
+                  "headingType": "h1",
+                  "fontSize": "72px",
+                  "textAlign": "left",
+                  "lineHeight": "1",
+                  "linkStyle": {
+                    "inherit": true,
+                    "linkColor": "#0000ee",
+                    "linkHoverColor": "#0000ee",
+                    "linkUnderline": true,
+                    "linkHoverUnderline": true
+                  },
+                  "color": "#FFF6E5",
+                  "fontWeight": 900,
+                  "text": "2:14 AM",
+                  "fontFamily": {
+                    "label": "Arial Black",
+                    "value": "'Arial Black', Impact, 'Helvetica Neue', Arial, sans-serif"
+                  },
+                  "_meta": {
+                    "htmlID": "u_content_heading_5",
+                    "htmlClassNames": "u_content_heading"
+                  },
+                  "selectable": true,
+                  "draggable": true,
+                  "duplicatable": true,
+                  "deletable": true,
+                  "hideable": true
+                }
+              },
+              {
+                "type": "text",
+                "values": {
+                  "containerPadding": "10px",
+                  "fontSize": "20px",
+                  "textAlign": "left",
+                  "lineHeight": "1.5",
+                  "linkStyle": {
+                    "inherit": true,
+                    "linkColor": "#0000ee",
+                    "linkHoverColor": "#0000ee",
+                    "linkUnderline": true,
+                    "linkHoverUnderline": true
+                  },
+                  "color": "#FFF6E5",
+                  "fontFamily": {
+                    "label": "Georgia",
+                    "value": "Georgia, 'Times New Roman', serif"
+                  },
+                  "text": "was your most common signing time. Nothing good has ever been approved at that hour, and yet.",
+                  "_meta": {
+                    "htmlID": "u_content_text_6",
+                    "htmlClassNames": "u_content_text"
+                  },
+                  "selectable": true,
+                  "draggable": true,
+                  "duplicatable": true,
+                  "deletable": true,
+                  "hideable": true
+                }
+              }
+            ],
+            "values": {
+              "backgroundColor": "",
+              "padding": "0px",
+              "border": {},
+              "borderRadius": "0px",
+              "_meta": {
+                "htmlID": "u_column_5",
+                "htmlClassNames": "u_column"
+              },
+              "deletable": true,
+              "locked": false
+            }
+          }
+        ],
+        "values": {
+          "displayCondition": null,
+          "columns": false,
+          "_styleGuide": null,
+          "backgroundColor": "#1E1147",
+          "columnsBackgroundColor": "",
+          "backgroundImage": {
+            "url": "",
+            "fullWidth": true,
+            "repeat": "no-repeat",
+            "size": "custom",
+            "position": "center"
+          },
+          "padding": "56px 28px",
+          "anchor": "",
+          "noStackMobile": false,
+          "_meta": {
+            "htmlID": "u_row_5",
+            "htmlClassNames": "u_row"
+          },
+          "selectable": true,
+          "draggable": true,
+          "duplicatable": true,
+          "deletable": true,
+          "hideable": true,
+          "locked": false,
+          "cells": [
+            1
+          ]
+        }
+      },
+      {
+        "cells": [
+          1
+        ],
+        "columns": [
+          {
+            "contents": [
+              {
+                "type": "heading",
+                "values": {
+                  "containerPadding": "10px",
+                  "headingType": "h1",
+                  "fontSize": "80px",
+                  "textAlign": "left",
+                  "lineHeight": "1",
+                  "linkStyle": {
+                    "inherit": true,
+                    "linkColor": "#0000ee",
+                    "linkHoverColor": "#0000ee",
+                    "linkUnderline": true,
+                    "linkHoverUnderline": true
+                  },
+                  "color": "#1E1147",
+                  "fontWeight": 900,
+                  "text": "$1,940",
+                  "fontFamily": {
+                    "label": "Arial Black",
+                    "value": "'Arial Black', Impact, 'Helvetica Neue', Arial, sans-serif"
+                  },
+                  "_meta": {
+                    "htmlID": "u_content_heading_6",
+                    "htmlClassNames": "u_content_heading"
+                  },
+                  "selectable": true,
+                  "draggable": true,
+                  "duplicatable": true,
+                  "deletable": true,
+                  "hideable": true
+                }
+              },
+              {
+                "type": "text",
+                "values": {
+                  "containerPadding": "10px",
+                  "fontSize": "20px",
+                  "textAlign": "left",
+                  "lineHeight": "1.5",
+                  "linkStyle": {
+                    "inherit": true,
+                    "linkColor": "#0000ee",
+                    "linkHoverColor": "#0000ee",
+                    "linkUnderline": true,
+                    "linkHoverUnderline": true
+                  },
+                  "color": "#1E1147",
+                  "fontFamily": {
+                    "label": "Georgia",
+                    "value": "Georgia, 'Times New Roman', serif"
+                  },
+                  "text": "in fees. Your longest hold lasted <b>318 days</b>, which means the fees were the only thing moving.",
+                  "_meta": {
+                    "htmlID": "u_content_text_7",
+                    "htmlClassNames": "u_content_text"
+                  },
+                  "selectable": true,
+                  "draggable": true,
+                  "duplicatable": true,
+                  "deletable": true,
+                  "hideable": true
+                }
+              }
+            ],
+            "values": {
+              "backgroundColor": "",
+              "padding": "0px",
+              "border": {},
+              "borderRadius": "0px",
+              "_meta": {
+                "htmlID": "u_column_6",
+                "htmlClassNames": "u_column"
+              },
+              "deletable": true,
+              "locked": false
+            }
+          }
+        ],
+        "values": {
+          "displayCondition": null,
+          "columns": false,
+          "_styleGuide": null,
+          "backgroundColor": "#FF5C8A",
+          "columnsBackgroundColor": "",
+          "backgroundImage": {
+            "url": "",
+            "fullWidth": true,
+            "repeat": "no-repeat",
+            "size": "custom",
+            "position": "center"
+          },
+          "padding": "56px 28px",
+          "anchor": "",
+          "noStackMobile": false,
+          "_meta": {
+            "htmlID": "u_row_6",
+            "htmlClassNames": "u_row"
+          },
+          "selectable": true,
+          "draggable": true,
+          "duplicatable": true,
+          "deletable": true,
+          "hideable": true,
+          "locked": false,
+          "cells": [
+            1
+          ]
+        }
+      },
+      {
+        "cells": [
+          1
+        ],
+        "columns": [
+          {
+            "contents": [
+              {
+                "type": "text",
+                "values": {
+                  "containerPadding": "10px",
+                  "fontSize": "16px",
+                  "textAlign": "left",
+                  "lineHeight": "1.5",
+                  "linkStyle": {
+                    "inherit": true,
+                    "linkColor": "#0000ee",
+                    "linkHoverColor": "#0000ee",
+                    "linkUnderline": true,
+                    "linkHoverUnderline": true
+                  },
+                  "color": "#1E1147",
+                  "fontFamily": {
+                    "label": "Georgia",
+                    "value": "Georgia, 'Times New Roman', serif"
+                  },
+                  "text": "Your onchain personality",
+                  "_meta": {
+                    "htmlID": "u_content_text_8",
+                    "htmlClassNames": "u_content_text"
+                  },
+                  "selectable": true,
+                  "draggable": true,
+                  "duplicatable": true,
+                  "deletable": true,
+                  "hideable": true
+                }
+              },
+              {
+                "type": "heading",
+                "values": {
+                  "containerPadding": "10px",
+                  "headingType": "h1",
+                  "fontSize": "52px",
+                  "textAlign": "left",
+                  "lineHeight": "1",
+                  "linkStyle": {
+                    "inherit": true,
+                    "linkColor": "#0000ee",
+                    "linkHoverColor": "#0000ee",
+                    "linkUnderline": true,
+                    "linkHoverUnderline": true
+                  },
+                  "color": "#1E1147",
+                  "fontWeight": 900,
+                  "text": "The Diamond Handed Sleepwalker",
+                  "fontFamily": {
+                    "label": "Arial Black",
+                    "value": "'Arial Black', Impact, 'Helvetica Neue', Arial, sans-serif"
+                  },
+                  "_meta": {
+                    "htmlID": "u_content_heading_7",
+                    "htmlClassNames": "u_content_heading"
+                  },
+                  "selectable": true,
+                  "draggable": true,
+                  "duplicatable": true,
+                  "deletable": true,
+                  "hideable": true
+                }
+              },
+              {
+                "type": "text",
+                "values": {
+                  "containerPadding": "10px",
+                  "fontSize": "20px",
+                  "textAlign": "left",
+                  "lineHeight": "1.5",
+                  "linkStyle": {
+                    "inherit": true,
+                    "linkColor": "#0000ee",
+                    "linkHoverColor": "#0000ee",
+                    "linkUnderline": true,
+                    "linkHoverUnderline": true
+                  },
+                  "color": "#1E1147",
+                  "fontFamily": {
+                    "label": "Georgia",
+                    "value": "Georgia, 'Times New Roman', serif"
+                  },
+                  "text": "You held one position for most of a year. Whether that was a strategy or a lost password is between you and your wallet.",
+                  "_meta": {
+                    "htmlID": "u_content_text_9",
+                    "htmlClassNames": "u_content_text"
+                  },
+                  "selectable": true,
+                  "draggable": true,
+                  "duplicatable": true,
+                  "deletable": true,
+                  "hideable": true
+                }
+              }
+            ],
+            "values": {
+              "backgroundColor": "",
+              "padding": "0px",
+              "border": {},
+              "borderRadius": "0px",
+              "_meta": {
+                "htmlID": "u_column_7",
+                "htmlClassNames": "u_column"
+              },
+              "deletable": true,
+              "locked": false
+            }
+          }
+        ],
+        "values": {
+          "displayCondition": null,
+          "columns": false,
+          "_styleGuide": null,
+          "backgroundColor": "#FFF6E5",
+          "columnsBackgroundColor": "",
+          "backgroundImage": {
+            "url": "",
+            "fullWidth": true,
+            "repeat": "no-repeat",
+            "size": "custom",
+            "position": "center"
+          },
+          "padding": "56px 28px",
+          "anchor": "",
+          "noStackMobile": false,
+          "_meta": {
+            "htmlID": "u_row_7",
+            "htmlClassNames": "u_row"
+          },
+          "selectable": true,
+          "draggable": true,
+          "duplicatable": true,
+          "deletable": true,
+          "hideable": true,
+          "locked": false,
+          "cells": [
+            1
+          ]
+        }
+      },
+      {
+        "cells": [
+          1
+        ],
+        "columns": [
+          {
+            "contents": [
+              {
+                "type": "text",
+                "values": {
+                  "containerPadding": "10px",
+                  "fontSize": "18px",
+                  "textAlign": "left",
+                  "lineHeight": "1.5",
+                  "linkStyle": {
+                    "inherit": true,
+                    "linkColor": "#0000ee",
+                    "linkHoverColor": "#0000ee",
+                    "linkUnderline": true,
+                    "linkHoverUnderline": true
+                  },
+                  "color": "#FFF6E5",
+                  "fontFamily": {
+                    "label": "Georgia",
+                    "value": "Georgia, 'Times New Roman', serif"
+                  },
+                  "text": "Share yours with #OnchainWrapped",
+                  "_meta": {
+                    "htmlID": "u_content_text_10",
+                    "htmlClassNames": "u_content_text"
+                  },
+                  "selectable": true,
+                  "draggable": true,
+                  "duplicatable": true,
+                  "deletable": true,
+                  "hideable": true
+                }
+              },
+              {
+                "type": "button",
+                "values": {
+                  "containerPadding": "10px",
+                  "href": {
+                    "name": "web",
+                    "values": {
+                      "href": "https://example.com/wrapped/degen.sample",
+                      "target": "_blank"
+                    }
+                  },
+                  "buttonColors": {
+                    "color": "#1E1147",
+                    "backgroundColor": "#FFD43B",
+                    "hoverColor": "#FFFFFF",
+                    "hoverBackgroundColor": "#0879A1"
+                  },
+                  "size": {
+                    "autoWidth": true,
+                    "width": "100%"
+                  },
+                  "fontSize": "16px",
+                  "lineHeight": "120%",
+                  "textAlign": "center",
+                  "padding": "16px 28px",
+                  "border": {},
+                  "borderRadius": "999px",
+                  "text": "Copy my Wrapped link",
+                  "fontFamily": {
+                    "label": "Arial Black",
+                    "value": "'Arial Black', Impact, 'Helvetica Neue', Arial, sans-serif"
+                  },
+                  "_meta": {
+                    "htmlID": "u_content_button_1",
+                    "htmlClassNames": "u_content_button"
+                  },
+                  "selectable": true,
+                  "draggable": true,
+                  "duplicatable": true,
+                  "deletable": true,
+                  "hideable": true
+                }
+              }
+            ],
+            "values": {
+              "backgroundColor": "",
+              "padding": "0px",
+              "border": {},
+              "borderRadius": "0px",
+              "_meta": {
+                "htmlID": "u_column_8",
+                "htmlClassNames": "u_column"
+              },
+              "deletable": true,
+              "locked": false
+            }
+          }
+        ],
+        "values": {
+          "displayCondition": null,
+          "columns": false,
+          "_styleGuide": null,
+          "backgroundColor": "#1E1147",
+          "columnsBackgroundColor": "",
+          "backgroundImage": {
+            "url": "",
+            "fullWidth": true,
+            "repeat": "no-repeat",
+            "size": "custom",
+            "position": "center"
+          },
+          "padding": "56px 28px",
+          "anchor": "",
+          "noStackMobile": false,
+          "_meta": {
+            "htmlID": "u_row_8",
+            "htmlClassNames": "u_row"
+          },
+          "selectable": true,
+          "draggable": true,
+          "duplicatable": true,
+          "deletable": true,
+          "hideable": true,
+          "locked": false,
+          "cells": [
+            1
+          ]
+        }
+      }
+    ],
+    "values": {
+      "_styleGuide": null,
+      "borderRadius": "10px",
+      "contentAlign": "center",
+      "contentVerticalAlign": "middle",
+      "contentWidth": "640px",
+      "fontFamily": {
+        "label": "Georgia",
+        "value": "Georgia, 'Times New Roman', serif"
+      },
+      "textColor": "#1E1147",
+      "language": {},
+      "backgroundColor": "#1E1147",
+      "documentSize": "A4",
+      "documentOrientation": "portrait",
+      "documentMargin": "96px",
+      "preheaderText": "",
+      "linkStyle": {
+        "body": true,
+        "linkColor": "#0000ee",
+        "linkHoverColor": "#0000ee",
+        "linkUnderline": true,
+        "linkHoverUnderline": true
+      },
+      "backgroundImage": {
+        "url": "",
+        "fullWidth": true,
+        "repeat": "no-repeat",
+        "size": "custom",
+        "position": "center"
+      },
+      "accessibilityTitle": "",
+      "_meta": {
+        "htmlID": "u_body",
+        "htmlClassNames": "u_body"
+      }
+    }
+  },
+  "schemaVersion": 27
+}
