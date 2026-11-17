@@ -5,15 +5,15 @@ One data object and one set of components render **three outputs**:
 
 | Output | File | Use |
 |---|---|---|
-| Email (table based, Outlook/Gmail safe) | `out/email.html` | A teaser with the headline stats and a button to the full story |
-| Web page (responsive div/flexbox) | `out/web.html` | The full scrolling story |
-| PDF (print ready) | `out/onchain-wrapped.pdf` | A keepsake with a receipts page |
+| Email (table based, Outlook/Gmail safe) | `email.html` | A teaser with the headline stats and a button to the full story |
+| Web page (responsive div/flexbox) | `web.html` | The full scrolling story |
+| PDF (print ready) | `onchain-wrapped.pdf` | A keepsake with a receipts page |
 
-![Web scroll](wrapped-scroll.gif)
+![Web scroll](https://raw.githubusercontent.com/onchaindc/onchain-wrapped/main/wrapped-scroll.gif)
 
 | Email | PDF |
 |---|---|
-| ![Email](email.png) | ![PDF](pdf.png) |
+| ![Email](https://raw.githubusercontent.com/onchaindc/onchain-wrapped/main/email.png) | ![PDF](https://raw.githubusercontent.com/onchaindc/onchain-wrapped/main/pdf.png) |
 
 ## How Hyper Elements is used
 
