@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsx src/build.tsx",
     "pdf": "tsx src/pdf.ts",
-    "all": "npm run build && npm run pdf"
+    "all": "npm run build && npm run pdf && npm run card",
+    "card": "tsx src/card.tsx"
   },
   "license": "MIT",
   "dependencies": {
@@ -15,8 +16,9 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@types/node": "^26.6.6",
     "@types/react": "^18.3.0",
-    "playwright": "^1.50.0",
+    "playwright": "^1.65.1",
     "tsx": "^4.19.0",
     "typescript": "^5.6.0"
   }
