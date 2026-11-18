@@ -8,6 +8,7 @@ One data object and one set of components render **three outputs**:
 | Email (table based, Outlook/Gmail safe) | `email.html` | A teaser with the headline stats and a button to the full story |
 | Web page (responsive div/flexbox) | `web.html` | The full scrolling story |
 | PDF (print ready) | `onchain-wrapped.pdf` | A keepsake with a receipts page |
+| Share card (PNG) | `out/share-card.png` | A 1080x1350 image of the stats, made for posting |
 
 ![Web scroll](https://raw.githubusercontent.com/onchaindc/onchain-wrapped/main/wrapped-scroll.gif)
 
@@ -30,6 +31,7 @@ npm install
 npm run build     # writes out/email.html, out/web.html, out/document.html, out/design.json
 npx playwright install chromium   # first time only, for the PDF
 npm run pdf       # writes out/onchain-wrapped.pdf
+npm run card                       # writes out/share-card.png, a 1080x1350 share image
 ```
 
 No API keys needed. All numbers are **sample data for a fictional wallet** in `src/data.ts`.
