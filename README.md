@@ -12,6 +12,9 @@ One data object and one set of components render **three outputs**:
 
 ![Web scroll](https://raw.githubusercontent.com/onchaindc/onchain-wrapped/main/wrapped-scroll.gif)
 
+![Share card](https://raw.githubusercontent.com/onchaindc/onchain-wrapped/main/share-card.png)
+
+
 | Email | PDF |
 |---|---|
 | ![Email](https://raw.githubusercontent.com/onchaindc/onchain-wrapped/main/email.png) | ![PDF](https://raw.githubusercontent.com/onchaindc/onchain-wrapped/main/pdf.png) |
