@@ -1,166 +1,202 @@
 import type { ReactNode } from "react";
 import {
-  Email, Page, Document, Row, Column, ColumnLayouts,
-  Heading, Paragraph, Button, Table, Divider, PageBreak,
-} from "@unlayer/react-elements";
+  Button, Canvas, Column, Document, Email, Heading, Page, Section, Span, Table, TableCell, TableRow, Text, token,
+} from "@hyper-elements/react";
 import { WalletYear, pickPersona } from "./data";
+import { fontFaces, theme } from "./theme";
 
-export type Mode = "email" | "web" | "document";
-
-const C = {
-  ink: "#1E1147",
-  flamingo: "#FF5C8A",
-  mint: "#9BF0C8",
-  sun: "#FFD43B",
-  paper: "#FFF6E5",
-};
-
-const display = { label: "Arial Black", value: "'Arial Black', Impact, 'Helvetica Neue', Arial, sans-serif" };
-const body = { label: "Georgia", value: "Georgia, 'Times New Roman', serif" };
-
-type Tone = { bg: string; fg: string };
-const tones: Record<string, Tone> = {
-  ink: { bg: C.ink, fg: C.paper },
-  flamingo: { bg: C.flamingo, fg: C.ink },
-  mint: { bg: C.mint, fg: C.ink },
-  sun: { bg: C.sun, fg: C.ink },
-  paper: { bg: C.paper, fg: C.ink },
-};
-
-// One full width color block. Every stat in the Wrapped story is one of these.
-function Block({ tone, mode, children }: { tone: keyof typeof tones; mode: Mode; children: ReactNode }) {
-  const pad = mode === "document" ? "90px 36px" : "56px 28px";
-  return (
-    <Row layout={ColumnLayouts.OneColumn} backgroundColor={tones[tone].bg} padding={pad}>
-      <Column>{children}</Column>
-    </Row>
-  );
-}
-
-function Big({ tone, children, size = 84 }: { tone: keyof typeof tones; children: ReactNode; size?: number }) {
-  return (
-    <Heading headingType="h1" fontSize={`${size}px`} lineHeight={1} fontWeight={900} fontFamily={display} color={tones[tone].fg}>
-      {children}
-    </Heading>
-  );
-}
-
-function Say({ tone, html, size = 18 }: { tone: keyof typeof tones; html: string; size?: number }) {
-  return <Paragraph html={html} fontSize={`${size}px`} lineHeight={1.5} fontFamily={body} color={tones[tone].fg} />;
-}
-
+export type Kind = "email" | "page" | "doc";
 const n = (x: number) => x.toLocaleString("en-US");
+const ink = token("colors.primary");
+const paper = token("colors.paper");
+type Bg = "primary" | "flamingo" | "mint" | "sun" | "paper";
+const bg = (b: Bg) => token(`colors.${b}` as "colors.primary");
+const fgOn = (b: Bg) => (b === "primary" ? paper : ink);
 
-export function WrappedContent({ d, mode }: { d: WalletYear; mode: Mode }) {
+// One color block of the story. A Section in an email or page, a full-bleed page in the PDF.
+function Slide({ tone, kind, children }: { tone: Bg; kind: Kind; children: ReactNode }) {
+  if (kind === "doc")
+    return (
+      <Document.Page style={{ backgroundColor: bg(tone) }}>
+        <Column style={{ padding: [130, 0, 0, 0], gap: 18 }}>{children}</Column>
+      </Document.Page>
+    );
+  return <Section style={{ backgroundColor: bg(tone), padding: [58, 28], gap: 14 }}>{children}</Section>;
+}
+
+// Phone styles only exist for an Email or a Page, so a PDF page gets none.
+const phone = (kind: Kind, size: number) => (kind === "doc" ? {} : { mobile: { fontSize: size } });
+// Email clients can't load web fonts. If Arial Black is missing, a bold weight keeps the fallback heavy.
+const heavy = (kind: Kind) => (kind === "email" ? { fontWeight: 800 as const } : {});
+const Stat = ({ tone, size, kind, children }: { tone: Bg; size: number; kind: Kind; children: ReactNode }) => (
+  <Text style={{ apply: ["display"], fontSize: size, color: fgOn(tone), ...heavy(kind), ...phone(kind, Math.round(size * 0.68)) }}>{children}</Text>
+);
+const Say = ({ tone, size = 20, children }: { tone: Bg; size?: number; children: ReactNode }) => (
+  <Text style={{ fontSize: size, lineHeight: 1.5, color: fgOn(tone) }}>{children}</Text>
+);
+const B = ({ children }: { children: ReactNode }) => <Span style={{ fontWeight: 700 }}>{children}</Span>;
+
+function Sections({ d, kind }: { d: WalletYear; kind: Kind }) {
   const persona = pickPersona(d);
   const perDay = (d.txCount / 365).toFixed(2);
   const survived = d.aped - d.rugged;
   const survival = Math.round((survived / d.aped) * 100);
   const top = d.chains[0];
-  const full = mode !== "email";
+  const full = kind !== "email";
+  const doc = kind === "doc";
 
   return (
     <>
-      <Block tone="ink" mode={mode}>
-        <Say tone="ink" html={`${d.handle} &middot; ${d.address}`} size={15} />
-        <Big tone="ink" size={64}>{`Your ${d.year}, onchain.`}</Big>
-        <Say tone="ink" html="Every swap, bridge and 3 AM decision, counted. Scroll to see what you did." />
-      </Block>
+      <Slide tone="primary" kind={kind}>
+        <Say tone="primary" size={15}>{d.handle} · {d.address}</Say>
+        <Heading level={1} style={{ fontSize: 64, color: paper, ...heavy(kind), ...phone(kind, 44) }}>Your {d.year}, onchain.</Heading>
+        <Say tone="primary">Every swap, bridge and 3 AM decision, counted.{doc ? "" : " Scroll to see what you did."}</Say>
+      </Slide>
 
-      <Block tone="flamingo" mode={mode}>
-        <Big tone="flamingo" size={110}>{n(d.txCount)}</Big>
-        <Say tone="flamingo" size={22} html={`transactions signed. That is <b>${perDay}</b> a day. Your wallet did not take a single holiday.`} />
-      </Block>
-
-      {full && (
-        <Block tone="mint" mode={mode}>
-          <Big tone="mint" size={56}>{`${top.name} was home.`}</Big>
-          <Say tone="mint" html={`${Math.round((top.txs / d.txCount) * 100)}% of your activity lived there. You still visited ${d.chains.length - 1} other chains, mostly for airdrops.`} />
-          <Table
-            headers={["Chain", "Txs", "Share"]}
-            data={d.chains.map((c) => [c.name, n(c.txs), `${Math.round((c.txs / d.txCount) * 100)}%`])}
-          />
-        </Block>
-      )}
-
-      <Block tone="sun" mode={mode}>
-        <Big tone="sun" size={96}>{`${d.aped} apes.`}</Big>
-        <Say tone="sun" size={22} html={`<b>${d.rugged}</b> rugged. <b>${survived}</b> survived. That is a <b>${survival}%</b> survival rate, which is better than most of the people reading this.`} />
-      </Block>
+      <Slide tone="flamingo" kind={kind}>
+        <Stat kind={kind} tone="flamingo" size={118}>{n(d.txCount)}</Stat>
+        <Say tone="flamingo" size={24}>
+          transactions signed. That is <B>{perDay}</B> a day. Your wallet did not take a single holiday.
+        </Say>
+      </Slide>
 
       {full && (
-        <Block tone="ink" mode={mode}>
-          <Big tone="ink" size={72}>{d.nightOwlHour}</Big>
-          <Say tone="ink" size={20} html="was your most common signing time. Nothing good has ever been approved at that hour, and yet." />
-        </Block>
+        <Slide tone="mint" kind={kind}>
+          <Stat kind={kind} tone="mint" size={56}>{top.name} was home.</Stat>
+          <Say tone="mint">
+            {Math.round((top.txs / d.txCount) * 100)}% of your activity lived there. You still visited {d.chains.length - 1} other chains, mostly for airdrops.
+          </Say>
+          <Table style={{ width: "100%", cellPadding: [10, 12, 10, 0], rowBorder: { width: 1, style: "solid", color: ink }, borderCollapse: "collapse" }}>
+            <TableRow header>
+              <TableCell>Chain</TableCell>
+              <TableCell>Txs</TableCell>
+              <TableCell>Share</TableCell>
+            </TableRow>
+            {d.chains.map((c) => (
+              <TableRow key={c.name}>
+                <TableCell>{c.name}</TableCell>
+                <TableCell>{n(c.txs)}</TableCell>
+                <TableCell>{Math.round((c.txs / d.txCount) * 100)}%</TableCell>
+              </TableRow>
+            ))}
+          </Table>
+        </Slide>
       )}
+
+      <Slide tone="sun" kind={kind}>
+        <Stat kind={kind} tone="sun" size={100}>{d.aped} apes.</Stat>
+        <Say tone="sun" size={24}>
+          <B>{d.rugged}</B> rugged. <B>{survived}</B> survived. That is a <B>{survival}%</B> survival rate, better than most of the people reading this.
+        </Say>
+      </Slide>
 
       {full && (
-        <Block tone="flamingo" mode={mode}>
-          <Big tone="flamingo" size={80}>{`$${n(d.feesUsd)}`}</Big>
-          <Say tone="flamingo" size={20} html={`in fees. Your longest hold lasted <b>${d.longestHoldDays} days</b>, which means the fees were the only thing moving.`} />
-        </Block>
+        <Slide tone="primary" kind={kind}>
+          <Stat kind={kind} tone="primary" size={76}>{d.nightOwlHour}</Stat>
+          <Say tone="primary">was your most common signing time. Nothing good has ever been approved at that hour, and yet.</Say>
+          {doc ? (
+            <>
+              <Stat kind={kind} tone="primary" size={76}>${n(d.feesUsd)}</Stat>
+              <Say tone="primary">in fees. Your longest hold lasted <B>{d.longestHoldDays} days</B>, so the fees were the only thing moving.</Say>
+            </>
+          ) : null}
+        </Slide>
       )}
 
-      <Block tone="paper" mode={mode}>
-        <Say tone="paper" size={16} html="Your onchain personality" />
-        <Big tone="paper" size={52}>{persona.name}</Big>
-        <Say tone="paper" size={20} html={persona.blurb} />
-        {mode === "email" && (
-          <Button href={d.shareUrl} backgroundColor={C.ink} color={C.paper} fontFamily={display} fontSize="16px" padding="16px 28px" borderRadius="999px">
-            See your full Wrapped
-          </Button>
-        )}
-      </Block>
-
-      {mode === "document" && (
-        <>
-          <Row layout={ColumnLayouts.OneColumn} backgroundColor="#FFFFFF" padding="40px 36px">
-            <Column>
-              <PageBreak />
-              <Heading headingType="h2" fontSize="34px" fontFamily={display} color={C.ink}>The receipts</Heading>
-              <Paragraph fontFamily={body} fontSize="16px" color={C.ink} lineHeight={1.5}>
-                Five moments worth framing. Sample data for a fictional wallet.
-              </Paragraph>
-              <Table headers={["Date", "Moment", "Amount"]} data={d.moments.map((m) => [m.date, m.moment, m.amount])} />
-              <Divider borderTopColor={C.ink} />
-              <Paragraph fontFamily={body} fontSize="12px" color="#555555">
-                Onchain Wrapped is a novelty summary, not financial or tax advice.
-              </Paragraph>
-            </Column>
-          </Row>
-        </>
+      {full && !doc && (
+        <Slide tone="flamingo" kind={kind}>
+          <Stat kind={kind} tone="flamingo" size={84}>${n(d.feesUsd)}</Stat>
+          <Say tone="flamingo">in fees. Your longest hold lasted <B>{d.longestHoldDays} days</B>, so the fees were the only thing moving.</Say>
+        </Slide>
       )}
 
-      {mode === "web" && (
-        <Block tone="ink" mode={mode}>
-          <Say tone="ink" html="Share yours with #OnchainWrapped" />
-          <Button href={d.shareUrl} backgroundColor={C.sun} color={C.ink} fontFamily={display} fontSize="16px" padding="16px 28px" borderRadius="999px">
-            Copy my Wrapped link
-          </Button>
-        </Block>
-      )}
+      <Slide tone="paper" kind={kind}>
+        <Text style={{ apply: ["kicker"], color: ink }}>Your onchain personality</Text>
+        <Heading level={2} style={{ fontSize: 54, ...heavy(kind), ...phone(kind, 38) }}>{persona.name}</Heading>
+        <Say tone="paper">{persona.blurb}</Say>
+        {kind === "email" ? <Button href={d.shareUrl}>See your full Wrapped</Button> : null}
+        {doc ? (
+          <>
+            <Text style={{ apply: ["kicker"], color: ink, padding: [28, 0, 0, 0] }}>The receipts</Text>
+            <Table style={{ width: "100%", cellPadding: [9, 10, 9, 0], rowBorder: { width: 1, style: "solid", color: ink }, borderCollapse: "collapse" }}>
+              <TableRow header>
+                <TableCell style={{ width: 80 }}>Date</TableCell>
+                <TableCell>Moment</TableCell>
+                <TableCell style={{ width: 100 }}>Amount</TableCell>
+              </TableRow>
+              {d.moments.map((m) => (
+                <TableRow key={m.date}>
+                  <TableCell>{m.date}</TableCell>
+                  <TableCell>{m.moment}</TableCell>
+                  <TableCell>{m.amount}</TableCell>
+                </TableRow>
+              ))}
+            </Table>
+            <Text style={{ fontSize: 12, color: token("colors.foreground") }}>Onchain Wrapped is a novelty summary, not financial or tax advice. Sample data for a fictional wallet.</Text>
+          </>
+        ) : null}
+      </Slide>
+
+      {kind === "page" ? (
+        <Slide tone="primary" kind={kind}>
+          <Say tone="primary">Share yours with #OnchainWrapped</Say>
+          <Button href={d.shareUrl} style={{ backgroundColor: token("colors.sun"), color: ink }}>Copy my Wrapped link</Button>
+        </Slide>
+      ) : null}
     </>
   );
 }
 
-export function Wrapped({ d, mode }: { d: WalletYear; mode: Mode }) {
-  const common = { backgroundColor: C.ink, contentWidth: "640px", fontFamily: body, textColor: C.ink };
-  if (mode === "email")
-    return (
-      <Email {...common} previewText={`${d.txCount} transactions. ${d.aped} apes. Your ${d.year} onchain Wrapped is ready.`}>
-        <WrappedContent d={d} mode={mode} />
-      </Email>
-    );
-  if (mode === "web")
-    return (
-      <Page {...common}>
-        <WrappedContent d={d} mode={mode} />
-      </Page>
-    );
+// ---------- the four roots, one data object ----------
+export function WrappedEmail({ d }: { d: WalletYear }) {
   return (
-    <Document {...common} documentSize="Letter" documentOrientation="portrait">
-      <WrappedContent d={d} mode={mode} />
+    <Email theme={theme} width={600} title={`Your ${d.year} onchain Wrapped`} previewText={`${d.txCount} transactions. ${d.aped} apes. Your ${d.year} Wrapped is ready.`} lang="en" style={{ gap: 0 }}>
+      <Sections d={d} kind="email" />
+    </Email>
+  );
+}
+
+export function WrappedPage({ d, origin }: { d: WalletYear; origin: string }) {
+  return (
+    <Page theme={theme} width={680} title={`${d.handle} · Onchain Wrapped ${d.year}`} description={`${d.txCount} transactions, ${d.aped} apes. A year onchain.`} lang="en" fonts={fontFaces(origin)} style={{ gap: 0 }}>
+      <Sections d={d} kind="page" />
+    </Page>
+  );
+}
+
+export function WrappedDocument({ d, origin }: { d: WalletYear; origin: string }) {
+  return (
+    <Document theme={theme} size="Letter" margin={{ top: 56, right: 64, bottom: 56, left: 64 }} title={`Onchain Wrapped ${d.year} · ${d.handle}`} lang="en" fonts={fontFaces(origin)} style={{ fontSize: 18 }}>
+      <Sections d={d} kind="doc" />
     </Document>
+  );
+}
+
+export function WrappedCard({ d, origin }: { d: WalletYear; origin: string }) {
+  const persona = pickPersona(d);
+  const survived = d.aped - d.rugged;
+  const top = d.chains[0];
+  const Block = ({ tone, height, children }: { tone: Bg; height: number; children: ReactNode }) => (
+    <Column style={{ height, backgroundColor: bg(tone), padding: [44, 72], gap: 10 }}>{children}</Column>
+  );
+  return (
+    <Canvas theme={theme} width={1080} height={1350} title={`Onchain Wrapped ${d.year}`} lang="en" fonts={fontFaces(origin)} style={{ backgroundColor: ink }}>
+      <Block tone="primary" height={225}>
+        <Text style={{ fontSize: 30, color: paper }}>{d.handle} · {d.address}</Text>
+        <Heading level={1} style={{ fontSize: 84, color: paper }}>Your {d.year}, onchain.</Heading>
+      </Block>
+      <Block tone="flamingo" height={473}>
+        <Text style={{ apply: ["display"], fontSize: 230, color: ink }}>{n(d.txCount)}</Text>
+        <Text style={{ fontSize: 38, color: ink }}>transactions signed. {top.name} was home.</Text>
+      </Block>
+      <Block tone="sun" height={360}>
+        <Text style={{ apply: ["display"], fontSize: 150, color: ink }}>{d.aped} apes.</Text>
+        <Text style={{ fontSize: 38, color: ink }}>{d.rugged} rugged, {survived} survived. ${n(d.feesUsd)} in fees.</Text>
+      </Block>
+      <Block tone="paper" height={292}>
+        <Text style={{ fontSize: 28, color: ink }}>My onchain personality</Text>
+        <Heading level={2} fit={{ sizes: [76, 68, 60, 52], maxLines: 2 }} style={{ color: ink }}>{persona.name}</Heading>
+      </Block>
+    </Canvas>
   );
 }
