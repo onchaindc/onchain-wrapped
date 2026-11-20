@@ -1,24 +1,28 @@
 {
   "name": "onchain-wrapped",
-  "version": "1.0.0",
-  "description": "A Spotify Wrapped style year in review for any wallet. One data object, rendered as an email, a web page, and a PDF with Hyper Elements.",
+  "version": "2.0.0",
+  "private": true,
+  "description": "A Spotify Wrapped style year in review for any wallet, built with @hyper-elements/react: one data object renders an email, a web page, a PDF and a share card.",
   "type": "module",
-  "scripts": {
-    "build": "tsx src/build.tsx",
-    "pdf": "tsx src/pdf.ts",
-    "all": "npm run build && npm run pdf && npm run card",
-    "card": "tsx src/card.tsx"
-  },
   "license": "MIT",
+  "scripts": {
+    "postinstall": "node scripts/copy-fonts.mjs",
+    "build": "tsx src/build.tsx",
+    "check": "tsc --noEmit"
+  },
   "dependencies": {
-    "@unlayer/react-elements": "^0.2.1",
+    "@hyper-elements/react": "^0.5.0",
+    "@react-pdf/renderer": "^4.9.0",
+    "@resvg/resvg-js": "^2.6.2",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "satori": "^0.33.5"
   },
   "devDependencies": {
-    "@types/node": "^26.6.6",
+    "@fontsource/archivo-black": "^5.3.0",
+    "@fontsource/source-serif-4": "^5.3.1",
+    "@types/node": "^22.0.0",
     "@types/react": "^18.3.0",
-    "playwright": "^1.65.1",
     "tsx": "^4.19.0",
     "typescript": "^5.6.0"
   }
